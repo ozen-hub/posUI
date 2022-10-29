@@ -8,6 +8,10 @@ import { GetCustomerComponent } from './components/get-customer/get-customer.com
 import { DeleteCustomerComponent } from './components/delete-customer/delete-customer.component';
 import { UpdateCustomerComponent } from './components/update-customer/update-customer.component';
 import { GetAllCustomersComponent } from './components/get-all-customers/get-all-customers.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { GetAllCustomersComponent } from './components/get-all-customers/get-all
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
