@@ -32,4 +32,8 @@ export class CustomerService {
   deleteCustomer(id: any):Observable<any>{
     return this.http.delete('http://localhost:8080/api/v1/customer?id='+id);
   }
+  loadCustomers(page:number,size:number,text:string):Observable<any>{
+    return this.http.get('http://localhost:8080/api/v1/customer/list?page='+page
+      +'&size='+size+'&searchText='+text);
+  }
 }
