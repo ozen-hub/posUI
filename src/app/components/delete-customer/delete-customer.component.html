@@ -1,1 +1,35 @@
-<p>delete-customer works!</p>
+<div class="main-outer">
+  <div class="inner">
+    <form [formGroup]="getForm">
+      <div class="row" style="margin: 0">
+        <div class="col-12">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input formControlName="id" type="text" matInput placeholder="Customer Id">
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input formControlName="name" type="text" matInput  class="form-control" placeholder="Customer Name">
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input formControlName="address" type="text" matInput  class="form-control" placeholder="Address">
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input formControlName="salary" type="number" matInput  class="form-control" placeholder="Salary">
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <button class="button" mat-raised-button color="primary" (click)="getCustomer()">get Customer</button>
+        </div>
+        <div class="col-6">
+          <button class="button" mat-raised-button color="warn" (click)="deleteCustomer()">Delete</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

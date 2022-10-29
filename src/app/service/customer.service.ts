@@ -29,4 +29,7 @@ export class CustomerService {
   getCustomer(id: any):Observable<any>{
     return this.http.get('http://localhost:8080/api/v1/customer/'+id);
   }
+  deleteCustomer(id: any):Observable<any>{
+    return this.http.delete('http://localhost:8080/api/v1/customer?id='+id);
+  }
 }
