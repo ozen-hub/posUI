@@ -26,4 +26,7 @@ export class CustomerService {
       salary:customer.salary,
     })
   }
+  getCustomer(id: any):Observable<any>{
+    return this.http.get('http://localhost:8080/api/v1/customer/'+id);
+  }
 }
