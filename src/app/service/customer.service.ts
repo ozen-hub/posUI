@@ -18,4 +18,12 @@ export class CustomerService {
       salary:customer.salary,
     })
   }
+  updateCustomer(customer:CustomerDTO):Observable<any>{
+    return this.http.put('http://localhost:8080/api/v1/customer',{
+      id:customer.id,
+      name:customer.name,
+      address:customer.address,
+      salary:customer.salary,
+    })
+  }
 }
