@@ -31,6 +31,12 @@ export class SaveCustomerComponent implements OnInit {
     );
     this.customerService.saveCustomer(customer).subscribe(response=>{
       console.log(response);
+      this.saveForm.patchValue({
+        id:null,
+        name:null,
+        address:null,
+        salary:null,
+      })
     }, error => {
       console.log(error);
     })
